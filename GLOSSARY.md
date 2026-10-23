@@ -1,0 +1,21 @@
+# Glossary
+
+- **Enclave:** an isolated region of a process (SGX).
+- **Confidential VM (CVM):** a VM whose memory is protected from the hypervisor (TDX, SEV-SNP).
+- **Measurement:** a hash of initial code and configuration.
+- **TCB:** Trusted Computing Base; also the versioned firmware/microcode level reported in attestation.
+- **Sealing:** encrypting data so only the same enclave/platform can decrypt it.
+- **Side channel:** leakage through timing, memory access or other indirect effects.
+- **Iago attack:** a malicious OS returning crafted values to trusted code.
+- **Forking attack:** running several copies of an enclave to get inconsistent results.
+- **Attester / relying party / verifier:** IETF RATS roles: the TEE producing evidence, the service deciding to trust it, and the component that applies policy to evidence.
+- **Bounce buffer:** a shared, encrypted staging area used to move data between a confidential VM and a device such as a GPU.
+- **Channel binding:** placing a hash of a session key in attestation report data so the attested code is the endpoint of the channel.
+- **Collateral:** certificates, TCB information and revocation lists needed to verify an attestation.
+- **ECALL / OCALL:** calls into and out of an SGX enclave; OCALL return values are untrusted.
+- **EDL:** Enclave Definition Language, the SGX SDK file describing the enclave interface.
+- **ISVSVN:** the security version number an SGX enclave author assigns to a build.
+- **MRENCLAVE / MRSIGNER:** SGX measurements of enclave contents and of the signing key.
+- **Rollback attack:** feeding a TEE an older sealed state to reuse it.
+- **Single-stepping:** interrupting an enclave after every instruction to observe its execution precisely.
+- **Welch's t-test:** a statistical test used (for example by dudect) to detect timing differences between input classes.
